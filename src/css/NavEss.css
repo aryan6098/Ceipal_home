@@ -73,7 +73,13 @@ a {
 .form-row {
   margin-top: 20px;
 }
-
+.sortby{
+  width: 50%;
+  height: 35px;
+  margin-left: 30px;
+  margin-top: -7px;
+  color: #495057;
+}
 .requestDate {
   width: 100%;
   height: 35px;

@@ -19,7 +19,7 @@ export default class WorkList extends Component {
         <div>
           <Navbarcomp search />
         </div> 
-        <div className="container-fluid">
+        <div className="container-fluid ">
           <div class="content_page_head">Work List(s)</div>
           <br /><br /><br /><br />
           <div className="container">

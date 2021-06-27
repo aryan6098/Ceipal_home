@@ -38,7 +38,7 @@ class Navbarcomp extends Component {
               <Nav.Link as={Link} to={"/#"}>
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to={"/essnav"}>
+              <Nav.Link as={Link} to={"/essrequest"}>
                 ESS
               </Nav.Link>
               <Nav.Link as={Link} to={"/timesheet"}>
@@ -73,7 +73,7 @@ class Navbarcomp extends Component {
               <ReactTooltip id="Work List" effect="solid">
                 Work List
               </ReactTooltip>
-              
+
               <Dropdown className="add">
                 <Dropdown.Toggle variant="transparent" id="dropdown-basic">
                   <MdAdd />

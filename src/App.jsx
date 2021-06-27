@@ -7,6 +7,7 @@ import EssNav from "./components/EssNav";
 import RequestDetails from "./components/ESS/RequestDetails";
 import WorkList from "./components/WorkList";
 import Timesheet from "./components/Timesheet";
+import EssRequest from "./components/ESS/EssRequest";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
         <Route exact path="/" component={Home}></Route>
 
         <Route exact path="/essnav" component={EssNav}></Route>
+
+        <Route exact path="/essrequest" component={EssRequest}></Route>
 
         <Route exact path="/worklist" component={WorkList}></Route>
 

@@ -35,7 +35,7 @@ function EssNav() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link as={Link} to={"/essnav"}>
+              <Nav.Link as={Link} to={"/essrequest"}>
                 ESS Request
               </Nav.Link>
               <Nav.Link as={Link} to={"/requestdetails"}>
@@ -52,7 +52,7 @@ function EssNav() {
         </Navbar>
       </div>
 
-      <div className="container-fluid">
+      {/* <div className="container-fluid">
         <div>
           <div>
             <b>ESS Request</b>
@@ -213,7 +213,7 @@ function EssNav() {
             <div className="pagination-info">Showing 0 to 0 of 0 records. </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }
