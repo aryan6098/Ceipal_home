@@ -4,7 +4,7 @@ import '../css/Navcom.css';
 function  Footer() {
         return (
             <div>
-                <footer className="sticky-footer">
+                <footer className="footer">
                 <p>Copyright © 2012 - 2021 CEIPAL - Human Capital Management Solution - WF Ver 12.13. All Rights Reserved.</p>
   
 </footer>

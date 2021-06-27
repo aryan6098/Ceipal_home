@@ -22,7 +22,8 @@ svg {
 .navbar {
   position: top;
   background: hsla(216, 85%, 24%, 0.877);
-  line-height: 0.5rem;
+  width: 100%;
+  height: 3.5rem;
 }
 
 .navbar .navbar-nav .nav-link {
@@ -47,22 +48,32 @@ svg {
 }
 
 .icon {
-  font-size: 25px;
+  font-size: 20px;
   color: white;
   font-size: 30px;
-  padding-right: 12px;
+  margin-right: 8px;
+  padding-right: 8px;
 }
 
 .a {
-  margin: 10px;
+  margin: 12px;
 }
 
-a {
+.a {
   color: white;
 }
 .a:hover {
   color: #f19f56;
 }
+
+.textsearch{
+  width: 35rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  font-size: 0.8rem;
+}
+
+
 
 /* footer code*/
 /* .sticky-footer {
@@ -80,18 +91,21 @@ footer p {
   font-size: 1rem;
 } */
 
-.sticky-footer{
-  margin-bottom: 0rem;
+.footer{
+  position:fixed;
+  left:0;
+  bottom:0;
+  right:0;
   width: 100%;
-  background-color:#24190fda;
-  margin-top: auto;
+  background-color: rgba(58, 45, 45, 0.733);
+  /* margin-top: auto; */
   
 }
 
-.sticky-footer p{
+.footer p{
   margin: 0;
   text-align: center;
   color: #fff;
   line-height: 2rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }

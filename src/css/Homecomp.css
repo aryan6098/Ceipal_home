@@ -121,3 +121,8 @@ table.dataTable td {
     outline: none;
     padding: 0;
 }
+
+.key_Dates {
+    margin-left: 1rem;
+    margin-right: -10rem;
+}

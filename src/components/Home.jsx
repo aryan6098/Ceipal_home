@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { Row, Col, Container, Table } from 'react-bootstrap';
 import Navbarcomp from "./Navbarcomp";
 import "../css/Homecomp.css";
+import Navcom from "../css/Navcom.css";
 
 class Home extends Component {
   render() {
@@ -28,40 +30,59 @@ class Home extends Component {
           <br /> <br />
           <div id="content">
             <div className="tile-emp-info">
-              <div className="panel-heading tile-sort-handle">
-                <span className="panel-title">My Info</span>
-              </div>
-              <br />
-              <div className="row">
-                <br />
-                <div className="col-md-6 col-lg-3">
-                  <b>Anusha Singla</b> Executive <br />
-                  Employee-Id : 345 <br />
-                  7082288503 <br />
-                  anusha.singla@infostride.com <br />
-                  <button> Add About Yourself</button>
-                </div>
-                <div className="col-md-6 col-lg-9">
-                  {/* 1st */}
-                  <div className="col-md-6 pt-0">
-                    <div className="col-md-12 pt-0">
+
+              <div>
+                <Container>
+                  <Row>
+
+                    <Col>
+                      <b>Employee Name</b> Executive <br />
+                      Employee-Id : ABCD <br />
+                      Employee number <br />
+                      employeeid@infostride.com <br />
+                      <button> Add About Yourself</button>
+                    </Col>
+
+                    <Col>
                       <h6>TIMESHEETS</h6>
                       <p class="well nm">
                         You don’t have any pending timesheets.
                       </p>
-                    </div>
-                    <br />
-                    <div className="col-md-12 margin-5b">
+                      <br />
                       <h6>STATUS REPORTS</h6>
                       <p className="well nm">
                         You don't have any status reports to submit
                       </p>
-                    </div>
-                  </div>
-                  {/* 2nd */}
-                  <div className="col-md-6 pt-0">Key Dates</div>
-                </div>
+                    </Col>
+
+
+                    <Col className="key_Dates " ><h6>Key Dates</h6>
+                      <Table className="dataTable">
+                        <thead >
+
+                          <tr>
+
+                            <th>Type</th>
+                            <th>Status</th>
+                            <th>Approved From</th>
+                            <th>Approved Until</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td colSpan="4">No Data</td>
+                          </tr>
+
+
+                        </tbody>
+                      </Table>
+
+                    </Col>
+                  </Row>
+                </Container>
+
               </div>
+
 
               <div
                 className="data-table dataTable col-md-12 margin-20t cl"
@@ -121,22 +142,22 @@ class Home extends Component {
               </div>
               <div className="col-md-6 col-lg-6">
                 <div
-                  class="holidays tile-portlet"
+                  class="holidays tile-portlet mb-5"
                   data-id="13"
                   id="tile_13"
                   data-panel-id="company_holidays"
                 >
                   <div
-                    class="panel-heading tile-sort-handle ui-sortable-handle"
+                    class="panel-heading tile-sort-handle ui-sortable-handle "
                     data-placement="top"
                     data-toggle="tooltip"
                     title="Drag &amp; Drop tiles to sort."
                     rel="tooltip"
                     data-original-title="Drag &amp; Drop Tiles to Sort"
                   >
-                    <span class="panel-title">Holidays Calendar</span>
+                    <span class="panel-title ">Holidays Calendar</span>
                   </div>
-                  <div class="panel-body pn scrollable mCustomScrollbar _mCS_1 mCS-autoHide">
+                  <div class="panel-body pn scrollable mCustomScrollbar _mCS_1 mCS-autoHide ">
                     <div
                       id="mCSB_1"
                       class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside"

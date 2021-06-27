@@ -6,6 +6,7 @@ import { Route, Switch } from "react-router-dom";
 import EssNav from "./components/EssNav";
 import RequestDetails from "./components/ESS/RequestDetails";
 import WorkList from "./components/WorkList";
+import Timesheet from "./components/Timesheet";
 
 function App() {
   return (
@@ -15,13 +16,17 @@ function App() {
         <Route exact path="/" component={Home}></Route>
 
         <Route exact path="/essnav" component={EssNav}></Route>
+
         <Route exact path="/worklist" component={WorkList}></Route>
 
-        <Route exact path="/requestdetails" component={RequestDetails}></Route>
+        <Route exact path="/timesheet" component={Timesheet}></Route>
 
-      </Switch>
+        <Route exact path="/requestdetails" component={RequestDetails}></Route>
+      </Switch> 
 
       <Footer />
+
+      {/* <Home2/> */}
     </>
   );
 }

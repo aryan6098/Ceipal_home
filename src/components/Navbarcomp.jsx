@@ -48,12 +48,32 @@ class Navbarcomp extends Component {
             <Form inline className="icon">
               {this.state.show ? (
                 <input
+                  className="textsearch"
                   type="text"
                   id="textbox"
-                  placeholder="&nbsp;Search here"
-                  size="47"
+                  placeholder="&nbsp;Search By Employee Id Empoyee Name Employee Code "
                 ></input>
               ) : null}
+              <i
+                className="a"
+                data-tip
+                data-for="search"
+                type="button"
+                onClick={() => this.display()}
+              >
+                <FiSearch />
+              </i>
+              <ReactTooltip id="search" effect="solid">
+                Search
+              </ReactTooltip>
+
+              <Nav.Link as={Link} to={"/worklist"} className="a" data-tip data-for="Work List" >
+                <MdNotificationsNone />
+              </Nav.Link>
+              <ReactTooltip id="Work List" effect="solid">
+                Work List
+              </ReactTooltip>
+              
               <Dropdown className="add">
                 <Dropdown.Toggle variant="transparent" id="dropdown-basic">
                   <MdAdd />
@@ -76,7 +96,7 @@ class Navbarcomp extends Component {
 
                   <Dropdown.Menu>
                     <Dropdown.Item id="profile-title">
-                      <b>Anusha Singla </b> <br /> <br /> <br />
+                      <b>Employee Name </b> <br /> 
                       (Executive)
                     </Dropdown.Item>
                     <Dropdown.Item>
@@ -92,24 +112,7 @@ class Navbarcomp extends Component {
                   </Dropdown.Menu>
                 </Dropdown>
               </div>
-              <i
-                className="a"
-                data-tip
-                data-for="search"
-                type="button"
-                onClick={() => this.display()}
-              >
-                <FiSearch />
-              </i>
-              <ReactTooltip id="search" effect="solid">
-                Search
-              </ReactTooltip>
-              <Nav.Link  as={Link} to={"/worklist"} className="a" data-tip data-for="Work List" >
-                <MdNotificationsNone />
-              </Nav.Link>
-              <ReactTooltip id="Work List" effect="solid">
-                Work List
-              </ReactTooltip>
+              
 
               <i className="a" data-tip data-for="App" type="button">
                 <AiOutlineAppstore />
