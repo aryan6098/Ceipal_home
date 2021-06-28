@@ -7,10 +7,10 @@ import {
   AiOutlineAlignLeft,
   AiOutlineHome,
   AiOutlineCheckSquare,
-  AiOutlineCalendar
+  AiOutlineCalendar,
 } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import "../css/NavEss.css";
+import "../../css/main/NavEss.css";
 import { FaDownload } from "react-icons/fa";
 import { Table } from "react-bootstrap";
 
@@ -26,9 +26,18 @@ function EssNav() {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Item href="/"><AiOutlineHome/>&nbsp;&nbsp;Home</Dropdown.Item>
-                <Dropdown.Item href="/essnav"><AiOutlineCheckSquare/>&nbsp;&nbsp;Ess</Dropdown.Item>
-                <Dropdown.Item href="/timesheet"><AiOutlineCalendar/>&nbsp;&nbsp;Timesheet</Dropdown.Item>
+                <Dropdown.Item href="/">
+                  <AiOutlineHome />
+                  &nbsp;&nbsp;Home
+                </Dropdown.Item>
+                <Dropdown.Item href="/essnav">
+                  <AiOutlineCheckSquare />
+                  &nbsp;&nbsp;Ess
+                </Dropdown.Item>
+                <Dropdown.Item href="/timesheet">
+                  <AiOutlineCalendar />
+                  &nbsp;&nbsp;Timesheet
+                </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </Navbar.Brand>

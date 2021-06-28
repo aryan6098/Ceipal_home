@@ -5,25 +5,34 @@ import { MdNotificationsNone } from "react-icons/md";
 import { MdAdd } from "react-icons/md";
 import { AiOutlineAppstore, AiOutlineLogout } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
-import "../css/Navcom.css";
+import "../../css/main/Navcom.css";
 import ReactTooltip from "react-tooltip";
 import { Link } from "react-router-dom";
 import { FaRegBuilding } from "react-icons/fa";
-
+import { Redirect } from "react-router-dom";
 class Navbarcomp extends Component {
   constructor(props) {
     super(props);
     this.state = {
       show: false,
+      isLogout: false,
     };
   }
   display() {
     this.setState({ show: !this.state.show });
   }
+  logout() {
+    localStorage.removeItem("user-info");
+    this.setState({ isLogout: true });
+  }
 
   render() {
+    // if (this.state.isLogout == true) {
+    //   <Redirect to="/" />;
+    // }
     return (
       <div>
+        {this.state.isLogout ? <Redirect to="/" /> : null}
         <>
           <Navbar class="navbar" variant="dark">
             <Navbar.Brand href="/#">
@@ -67,7 +76,13 @@ class Navbarcomp extends Component {
                 Search
               </ReactTooltip>
 
-              <Nav.Link as={Link} to={"/worklist"} className="a" data-tip data-for="Work List" >
+              <Nav.Link
+                as={Link}
+                to={"/worklist"}
+                className="a"
+                data-tip
+                data-for="Work List"
+              >
                 <MdNotificationsNone />
               </Nav.Link>
               <ReactTooltip id="Work List" effect="solid">
@@ -96,7 +111,7 @@ class Navbarcomp extends Component {
 
                   <Dropdown.Menu>
                     <Dropdown.Item id="profile-title">
-                      <b>Employee Name </b> <br /> 
+                      <b>Employee Name </b> <br />
                       (Executive)
                     </Dropdown.Item>
                     <Dropdown.Item>
@@ -104,7 +119,11 @@ class Navbarcomp extends Component {
                       INFOSTRIDE (INDIA)
                     </Dropdown.Item>
                     <Dropdown.Item href="#">
-                      <button className="a" id="profile-logout">
+                      <button
+                        className="a"
+                        id="profile-logout"
+                        onClick={() => this.logout()}
+                      >
                         Logout
                         <AiOutlineLogout />
                       </button>
@@ -112,7 +131,6 @@ class Navbarcomp extends Component {
                   </Dropdown.Menu>
                 </Dropdown>
               </div>
-              
 
               <i className="a" data-tip data-for="App" type="button">
                 <AiOutlineAppstore />

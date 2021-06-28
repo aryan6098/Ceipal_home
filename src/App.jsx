@@ -1,20 +1,26 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Footer from "./components/Footer";
-import Home from "./components/Home";
+import Footer from "./components/main/Footer";
+import Home from "./components/main/Home";
 import { Route, Switch } from "react-router-dom";
-import EssNav from "./components/EssNav";
-import RequestDetails from "./components/ESS/RequestDetails";
-import WorkList from "./components/WorkList";
-import Timesheet from "./components/Timesheet";
-import EssRequest from "./components/ESS/EssRequest";
-
+import EssNav from "./components/main/EssNav";
+import RequestDetails from "./components/main/ESS/RequestDetails";
+import WorkList from "./components/main/WorkList";
+import Timesheet from "./components/main/Timesheet";
+import EssRequest from "./components/main/ESS/EssRequest";
+import SignIn from "./components/Login_Signup/SignIn";
+import SignUp from "./components/Login_Signup/SignUp";
 function App() {
   return (
     <>
-
       <Switch>
-        <Route exact path="/" component={Home}></Route>
+        <Route exact path="/">
+          <SignIn />
+        </Route>
+        <Route exact path="/signup">
+          <SignUp />
+        </Route>
+        <Route exact path="/home" component={Home}></Route>
 
         <Route exact path="/essnav" component={EssNav}></Route>
 
@@ -25,7 +31,7 @@ function App() {
         <Route exact path="/timesheet" component={Timesheet}></Route>
 
         <Route exact path="/requestdetails" component={RequestDetails}></Route>
-      </Switch> 
+      </Switch>
 
       <Footer />
 

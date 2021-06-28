@@ -1,9 +1,9 @@
 /* Top Div */
-.align{
+.align {
   color: #ddd;
   font-size: 20px;
 }
-#dropdown-basic{
+#dropdown-basic {
   color: #fff;
 }
 .dropdown-menu.show {
@@ -11,7 +11,7 @@
   margin-right: 20px;
   width: 20%;
   display: block;
-  
+
   padding: 1px 0px 1px 0px;
   font-weight: bold;
   /* border:2px solid hsla(216, 87%, 12%, 0.7); */
@@ -27,7 +27,7 @@
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
-  border-top: 1px solid #c3c7ca; 
+  border-top: 1px solid #c3c7ca;
 }
 
 #logout {
@@ -73,7 +73,7 @@ a {
 .form-row {
   margin-top: 20px;
 }
-.sortby{
+.sortby {
   width: 50%;
   height: 35px;
   margin-left: 30px;
@@ -106,10 +106,10 @@ a {
 }
 
 /* Fourth div */
-.sort{
-  margin-left: 60px ;
+.sort {
+  margin-left: 60px;
 }
-.sort-button{
+.sort-button {
   margin: 14px 5px 0px 5px;
   /* padding: 8px 8px; */
   line-height: 3px;
@@ -117,23 +117,24 @@ a {
   font-size: 20px;
   border: 2px solid #ddd;
 }
-#records-per-page{
+#records-per-page {
   margin-left: 400px;
 }
 
 /* Fifth Div */
-.top-row{
+.top-row {
   color: #043386;
 }
 .table {
   width: 100%;
   max-width: 100%;
 }
-.text{
+.text {
   padding: 0px;
   color: #666;
 }
-.pagination, .pagination-info {
+.pagination,
+.pagination-info {
   display: inline-block;
   margin: 1rem 0;
 }

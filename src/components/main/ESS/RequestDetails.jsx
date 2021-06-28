@@ -1,16 +1,24 @@
 import React from "react";
-import { Navbar, Nav, Form, Dropdown, Col, Container, Row, FormControl, Button } from "react-bootstrap";
 import {
-
+  Navbar,
+  Nav,
+  Form,
+  Dropdown,
+  Col,
+  Container,
+  Row,
+  FormControl,
+  Button,
+} from "react-bootstrap";
+import {
   AiOutlineSortAscending,
   AiOutlineSortDescending,
-
 } from "react-icons/ai";
 // import { Link } from "react-router-dom";
 // import { FaDownload } from "react-icons/fa";
 // import { Table } from "react-bootstrap";
-import '../../css/NavEss.css';
-import EssNav from '../EssNav';
+import "../../../css/main/NavEss.css";
+import EssNav from "../EssNav";
 
 function RequestDetails() {
   return (
@@ -19,11 +27,12 @@ function RequestDetails() {
         <EssNav />
       </div>
 
-      <div><h3>My Request Details</h3></div>
+      <div>
+        <h3>My Request Details</h3>
+      </div>
 
       <Container>
         <Row>
-
           <Col>
             <label htmlFor="inlineFormInputGroup">Status</label>
             <div className="input-group mb-2 ">
@@ -42,7 +51,6 @@ function RequestDetails() {
                 <option value="6">Ignored</option>
               </select>
             </div>
-
           </Col>
 
           <Col>
@@ -108,7 +116,6 @@ function RequestDetails() {
 
       <Container>
         <Row>
-
           <Col>
             <Form className="d-flex mt-4">
               <FormControl
@@ -121,44 +128,32 @@ function RequestDetails() {
             </Form>
           </Col>
 
-          <Col><Form  display="inline">
-            <label htmlFor="inlineFormInputGroup">Sort By</label>
-            <div className="input-group">
-              <select
-                name="data[]"
-                id="period"
-                className="sortby "
-              >
-                <option value="1" selected="selected">
-                  Requested ID
-                </option>
-                <option value="2">Requested Date </option>
-                <option value="3">Requested ID</option>
-              </select>
-            </div>
+          <Col>
+            <Form display="inline">
+              <label htmlFor="inlineFormInputGroup">Sort By</label>
+              <div className="input-group">
+                <select name="data[]" id="period" className="sortby ">
+                  <option value="1" selected="selected">
+                    Requested ID
+                  </option>
+                  <option value="2">Requested Date </option>
+                  <option value="3">Requested ID</option>
+                </select>
+              </div>
 
-            <button type="submit" className="btn sort-button">
-              <AiOutlineSortAscending />
-            </button>
+              <button type="submit" className="btn sort-button">
+                <AiOutlineSortAscending />
+              </button>
 
-
-            <button type="submit" className="btn sort-button">
-              <AiOutlineSortDescending />
-            </button>
-          </Form>
+              <button type="submit" className="btn sort-button">
+                <AiOutlineSortDescending />
+              </button>
+            </Form>
           </Col>
 
           <Col>cdcsdcsd</Col>
-
         </Row>
-
-
       </Container>
-
-
-
-
-
     </>
   );
 }

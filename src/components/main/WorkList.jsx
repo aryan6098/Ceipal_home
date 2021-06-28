@@ -1,6 +1,6 @@
 import React, { Component, useState } from "react";
-import '../css/WorkList.css';
-import '../css/Navcom.css';
+import "../../css/main/WorkList.css";
+import "../../css/main/Navcom.css";
 
 import Navbarcomp from "./Navbarcomp";
 
@@ -12,16 +12,18 @@ export default class WorkList extends Component {
     };
   }
 
-
   render() {
     return (
       <>
         <div>
           <Navbarcomp search />
-        </div> 
+        </div>
         <div className="container-fluid ">
           <div class="content_page_head">Work List(s)</div>
-          <br /><br /><br /><br />
+          <br />
+          <br />
+          <br />
+          <br />
           <div className="container">
             <div id="table">
               <table
@@ -46,8 +48,8 @@ export default class WorkList extends Component {
                 <tbody>
                   <tr>
                     <td colspan="9" align="center">
-                      No worklist found in your stack, you will be notified if any
-                      worklist fall under your pool for approval.
+                      No worklist found in your stack, you will be notified if
+                      any worklist fall under your pool for approval.
                     </td>
                   </tr>
                 </tbody>
@@ -55,14 +57,8 @@ export default class WorkList extends Component {
               <hr />
             </div>
           </div>
-          
         </div>
-        
-        
-
-
       </>
-
     );
   }
 }

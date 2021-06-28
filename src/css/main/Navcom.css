@@ -66,14 +66,12 @@ svg {
   color: #f19f56;
 }
 
-.textsearch{
+.textsearch {
   width: 35rem;
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
   font-size: 0.8rem;
 }
-
-
 
 /* footer code*/
 /* .sticky-footer {
@@ -91,18 +89,17 @@ footer p {
   font-size: 1rem;
 } */
 
-.footer{
-  position:fixed;
-  left:0;
-  bottom:0;
-  right:0;
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
   background-color: rgba(58, 45, 45, 0.733);
   /* margin-top: auto; */
-  
 }
 
-.footer p{
+.footer p {
   margin: 0;
   text-align: center;
   color: #fff;

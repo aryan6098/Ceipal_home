@@ -1,11 +1,25 @@
 import React, { Component } from "react";
-import { Row, Col, Container, Table } from 'react-bootstrap';
+import { Row, Col, Container, Table } from "react-bootstrap";
 import Navbarcomp from "./Navbarcomp";
-import "../css/Homecomp.css";
-import Navcom from "../css/Navcom.css";
-
+import "../../css/main/Homecomp.css";
+import Navcom from "../../css/main/Navcom.css";
+import { Link, Redirect } from "react-router-dom";
 class Home extends Component {
+  constructor(props) {
+    super(props);
+    const token = localStorage.getItem("user-info");
+    let loggedIn = true;
+    if (token == null) {
+      loggedIn = false;
+    }
+    this.state = {
+      loggedIn,
+    };
+  }
   render() {
+    if (this.state.loggedIn === false) {
+      return <Redirect to="/" />;
+    }
     return (
       <>
         <div>
@@ -30,11 +44,9 @@ class Home extends Component {
           <br /> <br />
           <div id="content">
             <div className="tile-emp-info">
-
               <div>
                 <Container>
                   <Row>
-
                     <Col>
                       <b>Employee Name</b> Executive <br />
                       Employee-Id : ABCD <br />
@@ -55,13 +67,11 @@ class Home extends Component {
                       </p>
                     </Col>
 
-
-                    <Col className="key_Dates " ><h6>Key Dates</h6>
+                    <Col className="key_Dates ">
+                      <h6>Key Dates</h6>
                       <Table className="dataTable">
-                        <thead >
-
+                        <thead>
                           <tr>
-
                             <th>Type</th>
                             <th>Status</th>
                             <th>Approved From</th>
@@ -72,17 +82,12 @@ class Home extends Component {
                           <tr>
                             <td colSpan="4">No Data</td>
                           </tr>
-
-
                         </tbody>
                       </Table>
-
                     </Col>
                   </Row>
                 </Container>
-
               </div>
-
 
               <div
                 className="data-table dataTable col-md-12 margin-20t cl"
